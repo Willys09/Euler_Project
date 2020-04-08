@@ -8,43 +8,37 @@ namespace Euler_Project.Problems
      * By considering the terms in the Fibonacci sequence whose values do not exceed four million, 
      * find the sum of the even-valued terms.
      */
-    class Problem2
+    class Problem2 : IProblem
     {
         //Constants
         private const int Max = 4000000;
         
         //Local Fields
-        public int Answer;
+        public long Answer { get; set; }
 
 
         //Constructors
         public Problem2()
         {
             Answer = 0;
-            Fibonacci(1, 1);
         }
 
 
         //Get Methods
-        public int GetAnswer()
-        {
-            return Answer;
-        }
         public void PrintAnswer()
         {
-            WriteProblem();
             Console.WriteLine("The answer to the problem is: " + Answer);
         }
-        private void WriteProblem()
+        public void PrintProblem()
         {
             Console.WriteLine("By considering the terms in the Fibonacci sequence whose values do not exceed four million,  ");
             Console.WriteLine("find the sum of the even-valued terms.\n");
         }
         //Work Methods
 
-        private void SolveProblem()
+        public void SolveProblem()
         {
-
+            Fibonacci(1, 1);
         }
         private void Fibonacci(int number1, int number2)
         {

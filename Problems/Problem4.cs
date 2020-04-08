@@ -9,10 +9,10 @@ namespace Euler_Project.Problems
     * Find the largest palindrome made from the product of two 3-digit numbers.
     */
 
-    class Problem4
+    class Problem4 : IProblem
     {
         //Local Fields
-        public long Answer;
+        public long Answer { get; set; }
         public int MultiplierAnswer;
         public int MultiplicandAnswer;
 
@@ -22,27 +22,25 @@ namespace Euler_Project.Problems
             Answer = 0;
             MultiplierAnswer = 0;
             MultiplicandAnswer = 0;
-            BruteForce();
         }
 
 
         //Getter Methods
-        public long GetAnswer()
-        {
-            return Answer;
-        }
 
         public void PrintAnswer()
         {
-            WriteProblem();
             Console.WriteLine("The answer to the problem is: " + Answer);
             Console.WriteLine("Using " + MultiplierAnswer + " and " + MultiplicandAnswer + " as multipliers");
         }
-        private void WriteProblem()
+        public void PrintProblem()
         {
             Console.WriteLine("Find the largest palindrome made from the product of two 3-digit numbers.\n");
         }
 
+        public void SolveProblem()
+        {
+            BruteForce();
+        }
         //Worker Methods
         private void BruteForce()
         {

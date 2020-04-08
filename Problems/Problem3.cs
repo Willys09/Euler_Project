@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Euler_Project.Problems
 {
-    class Problem3
+    class Problem3 : IProblem
     {
         /*
         *The prime factors of 13195 are 5, 7, 13 and 29.
@@ -15,34 +15,30 @@ namespace Euler_Project.Problems
         //Constants
         private const long NumberIn = 600851475143;
         //Local Fields
-        public long Answer;
+        public long Answer { get; set; }
 
         public Problem3()
         {
             Answer = 0;
-            RecursiveSolve(NumberIn);
-            PrintAnswer();
         }
 
         //Getter Methods
-        public long GetAnswer()
-        {
-            return Answer;
-        }
 
         public void PrintAnswer()
         {
-            WriteProblem();
             Console.WriteLine("The answer to the problem is: " + Answer);
         }
-        private void WriteProblem()
+        public void PrintProblem()
         {
             Console.WriteLine("The prime factors of 13195 are 5, 7, 13 and 29.");
             Console.WriteLine("What is the largest prime factor of the number 600851475143?\n");
         }
 
         //Worker Methods
-
+        public void SolveProblem()
+        {
+            RecursiveSolve(NumberIn);
+        }
         private void RecursiveSolve(long numberIn)
         {
             //If we get to the end of this for loop than the number is a prime number

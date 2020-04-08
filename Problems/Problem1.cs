@@ -20,9 +20,7 @@ namespace Euler_Project.Problems
         //Constructors
         public Problem1()
         {
-            PrintProblem();
-            SolveProblem();
-            PrintAnswer();
+            Answer = 0;
         }
 
 
@@ -34,7 +32,6 @@ namespace Euler_Project.Problems
 
         public void PrintAnswer()
         {
-            PrintProblem();
             Console.WriteLine("The answer to the problem is: " + Answer);
         }
         public void PrintProblem()
