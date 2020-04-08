@@ -1,4 +1,5 @@
 ﻿using System;
+using Euler_Project.Problems;
 
 namespace Euler_Project
 {
@@ -31,11 +32,15 @@ namespace Euler_Project
                 {
                     case "1":
                         Console.WriteLine("\n\nCase 1:\n\n");
-                        
+                        Problem1 problem1 = new Problem1();
+                        Console.WriteLine(problem1.GetSum());
                         Console.WriteLine("------------------------------\n");
                         break;
                     case "2":
                         Console.WriteLine("\n\nCase 2:\n\n");
+                        Problem2 problem2 = new Problem2();
+                        problem2.Fibonacci(1,1);
+                        Console.WriteLine("\n" + problem2.GetAnswer() + "\n");
                         Console.WriteLine("------------------------------\n");
                         break;
                     case "3":
