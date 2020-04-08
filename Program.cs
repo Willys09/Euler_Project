@@ -9,7 +9,7 @@ namespace Euler_Project
         private static bool endApp = false;
 
 
-        static void Main(string[] args)
+        static public void Main(string[] args)
         {
             Console.WriteLine("Console App Used to Display Results of my Euler Project Code");
             Console.WriteLine("As long as the questions are simple enough, they will all show up here.");
@@ -33,22 +33,24 @@ namespace Euler_Project
                     case "1":
                         Console.WriteLine("\n\nCase 1:\n\n");
                         Problem1 problem1 = new Problem1();
-                        Console.WriteLine(problem1.GetSum());
                         Console.WriteLine("------------------------------\n");
                         break;
                     case "2":
                         Console.WriteLine("\n\nCase 2:\n\n");
                         Problem2 problem2 = new Problem2();
-                        problem2.Fibonacci(1,1);
-                        Console.WriteLine("\n" + problem2.GetAnswer() + "\n");
+                        problem2.PrintAnswer();
                         Console.WriteLine("------------------------------\n");
                         break;
                     case "3":
-                        Console.WriteLine("\n\nCase 3:\n\n");                   
+                        Console.WriteLine("\n\nCase 3:\n\n");
+                        Problem3 problem3 = new Problem3();
+                        problem3.PrintAnswer();
                         Console.WriteLine("------------------------------\n");
                         break;
                     case "4":
                         Console.WriteLine("\n\nCase 4:\n\n");
+                        Problem4 problem4 = new Problem4();
+                        problem4.PrintAnswer();
                         Console.WriteLine("------------------------------\n");
                         break;
                     case "5":

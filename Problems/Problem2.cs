@@ -21,6 +21,7 @@ namespace Euler_Project.Problems
         public Problem2()
         {
             Answer = 0;
+            Fibonacci(1, 1);
         }
 
 
@@ -29,10 +30,23 @@ namespace Euler_Project.Problems
         {
             return Answer;
         }
-
+        public void PrintAnswer()
+        {
+            WriteProblem();
+            Console.WriteLine("The answer to the problem is: " + Answer);
+        }
+        private void WriteProblem()
+        {
+            Console.WriteLine("By considering the terms in the Fibonacci sequence whose values do not exceed four million,  ");
+            Console.WriteLine("find the sum of the even-valued terms.\n");
+        }
         //Work Methods
 
-        public void Fibonacci(int number1, int number2)
+        private void SolveProblem()
+        {
+
+        }
+        private void Fibonacci(int number1, int number2)
         {
             if(number1%2 == 0)
             {

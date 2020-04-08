@@ -9,35 +9,46 @@ namespace Euler_Project.Problems
      * The sum of these multiples is 23.
      * Find the sum of all the multiples of 3 or 5 below 1000.
      */
-    public class Problem1
+    public class Problem1 : IProblem
     {
         //Constants
         public const int Max = 1000;
 
         //Local Fields
-        public int Sum;
+        public long Answer { get; set; }
 
         //Constructors
         public Problem1()
         {
-            WriteProblem();
-            Sum = SolveProblem(Max);
+            PrintProblem();
+            SolveProblem();
+            PrintAnswer();
         }
 
 
         //Getter Methods
-        public int GetSum()
+        public long GetAnswer()
         {
-            return Sum;
+            return Answer;
         }
 
-
-        //Work Methods
-        private int SolveProblem(int maxIn)
+        public void PrintAnswer()
         {
-            int result = 0;
+            PrintProblem();
+            Console.WriteLine("The answer to the problem is: " + Answer);
+        }
+        public void PrintProblem()
+        {
+            Console.WriteLine("If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. ");
+            Console.WriteLine("The sum of these multiples is 23.");
+            Console.WriteLine("Find the sum of all the multiples of 3 or 5 below 1000.\n");
+        }
+        //Work Methods
+        public void SolveProblem()
+        {
+            long result = 0;
 
-            for(int i = 0; i < maxIn; i++)
+            for(int i = 0; i < Max; i++)
             {
                 //Check if the number is divisible by 3
                 //If it is, add it to them sum.
@@ -53,14 +64,7 @@ namespace Euler_Project.Problems
                     result += i;
                 }
             }
-            return result;
-        }
-
-        public void WriteProblem()
-        {
-            Console.WriteLine("If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. ");
-            Console.WriteLine("The sum of these multiples is 23.");
-            Console.WriteLine("Find the sum of all the multiples of 3 or 5 below 1000.");
+            Answer = result;
         }
 
     }
