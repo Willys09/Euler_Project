@@ -22,6 +22,10 @@ namespace Euler_Project
                 Console.WriteLine("Option 3: Run Problem 3.");
                 Console.WriteLine("Option 4: Run Problem 4.");
                 Console.WriteLine("Option 5: Run Problem 5.");
+                Console.WriteLine("Option 6: Run Problem 6.");
+                Console.WriteLine("Option 7: Run Problem 7.");
+                Console.WriteLine("Option 8: Run Problem 8.");
+                Console.WriteLine("Option 9: Run Problem 9.");
                 Console.WriteLine("\n");
 
 
@@ -68,6 +72,38 @@ namespace Euler_Project
                         problem5.PrintProblem();
                         problem5.SolveProblem();
                         problem5.PrintAnswer();
+                        Console.WriteLine("------------------------------\n");
+                        break;
+                    case "6":
+                        Console.WriteLine("\n\nCase 6:\n\n");
+                        IProblem problem6 = new Problem6();
+                        problem6.PrintProblem();
+                        problem6.SolveProblem();
+                        problem6.PrintAnswer();
+                        Console.WriteLine("------------------------------\n");
+                        break;
+                    case "7":
+                        Console.WriteLine("\n\nCase 7:\n\n");
+                        IProblem problem7 = new Problem7();
+                        problem7.PrintProblem();
+                        problem7.SolveProblem();
+                        problem7.PrintAnswer();
+                        Console.WriteLine("------------------------------\n");
+                        break;
+                    case "8":
+                        Console.WriteLine("\n\nCase 8:\n\n");
+                        IProblem problem8 = new Problem8();
+                        problem8.PrintProblem();
+                        problem8.SolveProblem();
+                        problem8.PrintAnswer();
+                        Console.WriteLine("------------------------------\n");
+                        break;
+                    case "9":
+                        Console.WriteLine("\n\nCase 9:\n\n");
+                        IProblem problem9 = new Problem9();
+                        problem9.PrintProblem();
+                        problem9.SolveProblem();
+                        problem9.PrintAnswer();
                         Console.WriteLine("------------------------------\n");
                         break;
                     case "n":
