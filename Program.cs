@@ -1,13 +1,12 @@
 ﻿using System;
 using Euler_Project.Problems;
+using EulerProject.Data.Readers;
 
 namespace Euler_Project
 {
-    class Program
+    public class Program
     {
-
         private static bool endApp = false;
-
 
         static public void Main(string[] args)
         {
@@ -105,6 +104,10 @@ namespace Euler_Project
                         problem9.SolveProblem();
                         problem9.PrintAnswer();
                         Console.WriteLine("------------------------------\n");
+                        break;
+                    case "10":
+                        var reader = new PokerHandsReader();
+                        reader.PrintLines();
                         break;
                     case "n":
                         endApp = true;
