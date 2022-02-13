@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Euler_Project.Problems
 {
@@ -20,6 +18,7 @@ namespace Euler_Project.Problems
             SumOfTheSquares = 0;
             SquareOfTheSums = 0;
         }
+
         public void PrintAnswer()
         {
             Console.WriteLine("The answer to the problem is: " + Answer);
@@ -44,7 +43,6 @@ namespace Euler_Project.Problems
                 sum += i;
             }
             SquareOfTheSums = sum * sum;
-
 
             //Difference
             Answer = Math.Abs(SumOfTheSquares - SquareOfTheSums);

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Euler_Project.Problems
 {
@@ -23,7 +21,6 @@ namespace Euler_Project.Problems
             Answer = 0;
         }
 
-
         //Getter Methods
         public long GetAnswer()
         {
@@ -34,12 +31,14 @@ namespace Euler_Project.Problems
         {
             Console.WriteLine("The answer to the problem is: " + Answer);
         }
+
         public void PrintProblem()
         {
             Console.WriteLine("If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. ");
             Console.WriteLine("The sum of these multiples is 23.");
             Console.WriteLine("Find the sum of all the multiples of 3 or 5 below 1000.\n");
         }
+
         //Work Methods
         public void SolveProblem()
         {
@@ -63,6 +62,5 @@ namespace Euler_Project.Problems
             }
             Answer = result;
         }
-
     }
 }

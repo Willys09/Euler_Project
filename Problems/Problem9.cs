@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Euler_Project.Problems
 {
@@ -20,6 +18,7 @@ namespace Euler_Project.Problems
         {
             Answer = 0;
         }
+
         public void PrintAnswer()
         {
             Console.WriteLine("The answer to the problem is: " + Answer);

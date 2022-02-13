@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Euler_Project.Problems
 {
@@ -8,14 +6,12 @@ namespace Euler_Project.Problems
     * A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
     * Find the largest palindrome made from the product of two 3-digit numbers.
     */
-
     class Problem4 : IProblem
     {
         //Local Fields
         public long Answer { get; set; }
         public int MultiplierAnswer;
         public int MultiplicandAnswer;
-
 
         public Problem4()
         {
@@ -24,14 +20,13 @@ namespace Euler_Project.Problems
             MultiplicandAnswer = 0;
         }
 
-
         //Getter Methods
-
         public void PrintAnswer()
         {
             Console.WriteLine("The answer to the problem is: " + Answer);
             Console.WriteLine("Using " + MultiplierAnswer + " and " + MultiplicandAnswer + " as multipliers");
         }
+
         public void PrintProblem()
         {
             Console.WriteLine("Find the largest palindrome made from the product of two 3-digit numbers.\n");
@@ -41,6 +36,7 @@ namespace Euler_Project.Problems
         {
             BruteForce();
         }
+
         //Worker Methods
         private void BruteForce()
         {

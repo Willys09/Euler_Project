@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Euler_Project.Problems
 {
     /*
-     * What is the 10 001st prime number?
+     * What is the 10001st prime number?
      */
     class Problem7 : IProblem
     {
@@ -15,6 +13,7 @@ namespace Euler_Project.Problems
         {
             Answer = 0;
         }
+
         public void PrintAnswer()
         {
             Console.WriteLine("The answer to the problem is: " + Answer);
@@ -58,7 +57,6 @@ namespace Euler_Project.Problems
                 }
             }
             return true;
-
         }
     }
 }
